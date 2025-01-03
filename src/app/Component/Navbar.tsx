@@ -1,136 +1,3 @@
-// import Image from "next/image";
-// import Link from "next/link";
-// import { Button } from "@/components/ui/button";
-// import { HamIcon } from "lucide-react";
-
-
-// const Navbar = () => {
-//   return (
-//     <nav className=" p-4 bg-background/50 sticky top-0 border-b backdrop-blur">
-//       <div className="container mx-auto flex justify-between items-center">
-//         <div className=" text-2xl font-bold">
-//           <Link href="/">
-//             <Image
-//               src="/logo.png"
-//               alt="logo"
-//               width={50}
-//               height={50}
-//               className="rounded-full"
-//             />
-//           </Link>
-//         </div>
-//         <ul className="flex items-center gap-6">
-//           <li>
-//             <Link href="/" className=" hover:text-gray-300">
-//               Home
-//             </Link>
-//           </li>
-//           <li>
-//             <Link href="/about" className=" hover:text-gray-300">
-//               About
-//             </Link>
-//           </li>
-
-//           <li>
-//             <Link href="/contact" className=" hover:text-gray-300">
-//               Contact
-//             </Link>
-//           </li>
-//         </ul>
-//       </div>
-//       <Button variant="outline">Login</Button>
-//       <Button variant="outline">SignUp</Button>
-//     </nav>
-//   );
-// }
-
-// export default Navbar;
-
-
-
-// "use client";
-// import Image from "next/image";
-// import Link from "next/link";
-// import { Button } from "@/components/ui/button";
-// import { Menu, X } from "lucide-react"; 
-// import { useState } from "react";
-
-// const Navbar = () => {
-//   const [menuOpen, setMenuOpen] = useState(false);
-
-//   const toggleMenu = () => {
-//     setMenuOpen(!menuOpen);
-//   };
-
-//   return (
-//     <nav className="p-4 bg-background/50 sticky top-0 border-b backdrop-blur">
-//       <div className="container mx-auto flex justify-between items-center">
-//         {/* Logo Section */}
-//         <div className="text-2xl font-bold">
-//           <Link href="/">
-//             <Image
-//               src="/logo.png"
-//               alt="logo"
-//               width={50}
-//               height={50}
-//               className="rounded-full"
-//             />
-//           </Link>
-//         </div>
-
-//         {/* Hamburger Icon */}
-//         <div className="lg:hidden">
-//           <button
-//             onClick={toggleMenu}
-//             className="text-gray-700 focus:outline-none"
-//           >
-//             {menuOpen ? <X size={24} /> : <Menu size={24} />}
-//           </button>
-//         </div>
-
-//         {/* Navigation Links */}
-//         <ul
-//           className={`flex-col lg:flex-row flex items-center gap-6 lg:gap-6 lg:flex ${
-//             menuOpen ? "flex" : "hidden"
-//           } lg:block`}
-//         >
-//           <li>
-//             <Link href="/" className="hover:text-gray-300">
-//               Home
-//             </Link>
-//           </li>
-//           <li>
-//             <Link href="/blog" className="hover:text-gray-300">
-//               Blog
-//             </Link>
-//           </li>
-//           <li>
-//             <Link href="/about" className="hover:text-gray-300">
-//               About
-//             </Link>
-//           </li>
-//           <li>
-//             <Link href="/contact" className="hover:text-gray-300">
-//               Contact
-//             </Link>
-//           </li>
-//         </ul>
-
-//         {/* Buttons Section */}
-//         <div
-//           className={`flex flex-col lg:flex-row gap-4 ${
-//             menuOpen ? "block" : "hidden"
-//           } lg:flex`}
-//         >
-//           <Button variant="outline">Login</Button>
-//           <Button variant="outline">Sign Up</Button>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
 "use client";
 import React from "react";
 import Link from "next/link";
@@ -143,94 +10,57 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
-//import { ModeToggle } from "./theme-btn";
-//import LoadingBar from "react-top-loading-bar";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 import Image from "next/image";
+import { ModeToggle } from "@/components/ui/theme-btn";
 
 const Navbar = () => {
-  // const [progress, setProgress] = useState(0);
-  // const pathname = usePathname();
-
-  // useEffect(() => {
-  //   setProgress(20);
-
-  //   setTimeout(() => {
-  //     setProgress(40);
-  //   }, 100);
-
-  //   setTimeout(() => {
-  //     setProgress(100);
-  //   }, 400);
-  // }, [pathname]);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setProgress(0);
-  //   }, 50);
-  // }, []);
-
   return (
-    <nav className="p-4 bg-background/50 sticky top-0 backdrop-blur border-b z-10">
-      {/* <LoadingBar
-        color="#933ce6"
-        progress={progress} */}
-        {/* onLoaderFinished={() => setProgress(0)}
-      /> */}
+    <nav className="p-2 bg-background/50 sticky top-0 backdrop-blur border-b z-10">
       <div className="container mx-auto flex justify-between items-center">
-           <Link href="/">
-        <div className="text-2xl font-bold">
-             <Image
-               src="/logo.png"
-               alt="logo"
-               width={50}
-               height={50}
-               className="rounded-full"
-							 />
-         </div>
-							 </Link>
+        <Link href="/">
+          <div className="text-2xl font-bold">
+            <Image
+              src="/logoo.webp"
+              alt="logo"
+              width={60}
+              height={60}
+              className="rounded-full"
+            />
+          </div>
+        </Link>
         <div className="hidden md:flex space-x-4 items-center">
           <Link
             href="/"
             className="hover:scale-105 hover:font-semibold transition-transform duration-300"
           >
-            {" "}
             Home
           </Link>
           <Link
-            href="/about"
+            href="/About"
             className="hover:scale-105 hover:font-semibold transition-transform duration-300"
           >
             About
           </Link>
           <Link
-            href="/blog"
+            href="/Blog"
             className="hover:scale-105 hover:font-semibold transition-transform duration-300"
           >
             Blog
           </Link>
           <Link
-            href="/contact"
+            href="/Contact"
             className="hover:scale-105 hover:font-semibold transition-transform duration-300"
           >
             Contact
           </Link>
           <div className="flex items-center">
-            <Button className="mx-1" variant="outline">
-              Login
-            </Button>
-            <Button className="mx-1" variant="outline">
-              Signup
-            </Button>
-            {/* <ModeToggle /> */}
+            <ModeToggle />
           </div>
         </div>
 
         <div className="md:hidden">
           <span className="mx-2">
-            {/* <ModeToggle /> */}
+            <ModeToggle />
           </span>
           <Sheet>
             <SheetTrigger>
